@@ -1,4 +1,10 @@
-## Hi there 👋
+## Hi 👋 My Name Is Loddit, and I'm...
+
+- 🧑 💻 A "Whatever-end" Developer, prefer using web technologies to build something useful.
+- 🏃 A "Park" Runner, enjoy running on the park's track to get into flow.
+- 🚴 A "One Day Trip" Cyclist, like riding into the countryside to feel the breeze and nature at speed.
+- 🐶 A "Dog" Guardian, have a puppy named Carbon, and we share a lot of life and fun together.
+- 🗺️ A "World" Explorer, always curious about both the reality and imagination of the world.
 
 <!--
 **loddit/loddit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
