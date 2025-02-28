@@ -1,0 +1,31 @@
+{
+  "name": "loddit",
+  "version": "1.0.0",
+  "description": "loddit's profile ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [
+    "loddit"
+  ],
+  "author": "loddit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loddit/loddit/issues"
+  },
+  "homepage": "https://github.com/loddit/loddit#readme",
+  "dependencies": {
+    "@astrojs/react": "^4.2.1",
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "astro": "^5.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.9"
+  }
+}
