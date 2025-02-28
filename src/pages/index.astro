@@ -1,16 +1,97 @@
 ---
-
+import '../styles/global.css';
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
 
+import { 
+  IconBrandStrava,
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandTwitter,
+  IconBrandDouban,
+  IconBrandDribbble,
+  IconArrowUp,
+  IconArrowDown
+} from '@tabler/icons-react'
+
+const links = [
+  {Icon: IconBrandTwitter, url: "https://x.com/loddit", label: 'twitter'},
+  {Icon: IconBrandGithub, url: "https://github.com/loddit", label: 'github'},
+  {Icon: IconBrandStrava, url: "https://www.strava.com/athletes/loddit", label: 'strava'},
+  {Icon: IconBrandInstagram, url: "https://www.instagram.com/loddit", label: 'instagram'},
+  {Icon: IconBrandDouban, url: "https://www.douban.com/people/loddit", label: 'douban'},
+  {Icon: IconBrandDribbble, url: "https://dribbble.com/loddit", label: 'dribbble'},
+]
+
+const aspects = [
+  {emoji: '💻', title: 'a "Whatever-end" Developer', desc: "enjoy running on the park's track to get into flow."},
+  {emoji: '🏃', title: 'a "Park" Runner', desc: "prefer using web technologies to build something useful."},
+  {emoji: '🚴', title: 'a "One Day Trip" Cyclist', desc: "like riding into the countryside to feel the breeze and nature at speed."},
+  {emoji: '🐶', title: 'a "Dog" Guardian', desc: "have a puppy named Carbon, and we share a lot of life and fun together."},
+  {emoji: '🗺️', title: 'a "World" Explorer', desc: "always curious about both the reality and imagination of the world."}
+]
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <div class="flex flex-col items-center justify-center bg-gradient-to-b from-slate-50 to-slate-100 h-full">
-    <div>
+  <div class="flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 to-slate-200 h-full">
+    <div class="flex flex-col items-center group/avatar relative -top-8 cursor-help">
+      <Image
+        src={`/avatar.png`}
+        alt="it's me, loddit"
+        height={128}
+        width={128}
+        class="w-32 h-32 rounded-full shadow-md hover:-rotate-5 transition duration-500"
+      />
+      <div class="opacity-0 group-hover/avatar:opacity-100 flex items-center absolute translate-x-30 transition">
+        <div class="border-solid border-r-white border-r-8 border-y-transparent border-y-8 border-l-0 translate-y-10" />
+        <div class="font-serif bg-white px-2 py-1 translate-y-10 rounded-sm">
+           Hi 👋<br/>
+           I'm Loddit 
+        </div>
+      </div>
+    </div>
+    <div class="flex gap-2 text-slate-800">
+      {links.map(({ Icon, url, label }) => (
+      <a href={url} class="opacity-70 hover:opacity-90 hover:-mt-0.5 transition-all" target="_blank" aria-label={label}>
+          <Icon color="gray">
+        </a>
+        ))}
+    </div>
+    <div class="flex flex-col items-center mt-6 text-slate-500 font-serif">
+      <h3 class="text-lg border-b border-slate-300 w-48 text-center mb-5">About Me</h3>
+      <ul class="w-full flex flex-col items-center gap-3 text-xs font-mono">
+        {aspects.map(({title, emoji, desc}) => (
+          <li class="flex flex-col items-center cursor-help group/title">
+            <div class="mb-1">
+              {emoji}
+            </div>
+            <div class="opacity-0 group-hover/title:opacity-100 transition duration-500">
+               <div class="absolute mx-auto w-1 border-solid border-white border-b-4 border-x-transparent border-x-4 border-t-0 -translate-x-1 -translate-y-1" />
+               <div class="absolute bg-white px-2 py-1 mt-1 rounded-sm -translate-y-1" style="transform: translateX(-50%)">
+                 {desc}
+               </div>
+            </div>
+            <div>
+              {title}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="flex flex-col items-center mt-6 text-slate-500 font-serif">
+      <h3 class="text-lg border-b border-slate-300 w-48 text-center mb-5">Side Project</h3>
+      <a href="https://parco.run" target="_blank">
+        <Image
+          src={`/parco.svg`}
+          height={300}
+          width={80}
+          alt="Parco"
+          class="w-18 hover:opacity-80 transition duration-500"
+        />
+      </a>
     </div>
   </div>
 </Layout>

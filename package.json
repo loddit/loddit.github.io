@@ -20,6 +20,7 @@
   "homepage": "https://github.com/loddit/loddit#readme",
   "dependencies": {
     "@astrojs/react": "^4.2.1",
+    "@tabler/icons-react": "^3.30.0",
     "@tailwindcss/vite": "^4.0.9",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
