@@ -1,8 +1,7 @@
 {
-  "name": "loddit",
+  "name": "loddit.github.io",
   "version": "1.0.0",
   "description": "loddit's profile ",
-  "main": "index.js",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -15,9 +14,9 @@
   "author": "loddit",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/loddit/loddit/issues"
+    "url": "https://github.com/loddit/loddit.github.io/issues"
   },
-  "homepage": "https://github.com/loddit/loddit#readme",
+  "homepage": "https://loddit.github.io",
   "dependencies": {
     "@astrojs/react": "^4.2.1",
     "@tabler/icons-react": "^3.30.0",
