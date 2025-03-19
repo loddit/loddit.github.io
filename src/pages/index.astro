@@ -37,7 +37,7 @@ const aspects = [
 
 <Layout>
   <div class="flex flex-col items-center justify-center bg-gradient-to-b from-slate-100 to-slate-200 h-full">
-    <div class="flex flex-col items-center group/avatar relative -top-8 cursor-help">
+    <div class="flex flex-col items-center group/avatar relative -top-4 cursor-help">
       <Image
         src={`/avatar.png`}
         alt="it's me, loddit"
@@ -81,17 +81,28 @@ const aspects = [
         ))}
       </ul>
     </div>
-    <div class="flex flex-col items-center mt-6 text-slate-500 font-serif">
-      <h3 class="text-lg border-b border-slate-300 w-48 text-center mb-5">Side Project</h3>
-      <a href="https://parco.run" target="_blank">
-        <Image
-          src={`/parco.svg`}
-          height={300}
-          width={80}
-          alt="Parco"
-          class="w-18 hover:opacity-80 transition duration-500"
-        />
-      </a>
+    <div class="flex flex-col items-center mt-6 text-slate-500 font-serif gap-6">
+      <h3 class="text-lg border-b border-slate-300 w-48 text-center">Side Projects</h3>
+      <div class="flex gap-8 items-center">
+        <a href="https://parco.run" target="_blank">
+          <Image
+            src={`/parco.svg`}
+            height={360}
+            width={96}
+            alt="Parco"
+            class="w-18 hover:opacity-80 transition duration-500"
+          />
+        </a>
+        <a href="https://www.xiaoyuzhoufm.com/podcast/67d92cb9798014ccd86e762e" target="_blank">
+          <Image
+            src={`/wildsome.png`}
+            height={128}
+            width={128}
+            alt="Wildsome"
+            class="w-18 hover:opacity-80 transition duration-500"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </Layout>
